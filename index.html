@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>API Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+</head>
+
+<body>
+    <div class="container">	
+        <div class="user-container"></div>	
+        <div class="quote-container"></div>	
+        <div class="content-container"></div>	
+        <div class="friends">	
+            <h4>Friends</h4>	
+            <div class="friends-container"></div>	
+        </div>	
+        <div class="buttons">	
+            <button id="loadbtn">Load User Data</button>	
+            <button id="displaybtn">Display User</button>	
+        </div>	
+    </div>
+
+
+
+
+
+    <script type="text/x-handlebars-template" id="quoteTempel">
+        <h2>{{quote}}</h2>
+    </script>
+
+    <script type="text/x-handlebars-template" id="frindsTempel">
+        {{#each frindsToRander}}
+        <p>{{fisrtName}}  {{secondName}}</p>
+        {{/each}}
+    </script>
+
+    <script type="text/x-handlebars-template" id="userTempel">
+       <img src="{{photoUrl}}" alt="">
+       <h2>{{fullName}}</h2>
+       <h4>{{location}}</h4>
+    </script>
+
+    <script type="text/x-handlebars-template" id="pokeTempel">
+    <div class="pokemon-container">
+        <img src="{{pokePicUrl}}" alt="">
+        <p>Favorite Pokemon: {{pokeName}}</p>
+    </div>
+    </script>
+
+    <script type="text/x-handlebars-template" id="aboutTempel">
+        <div class="meat-container">
+            <h5>About me:</h5>
+            <p>{{aboutMeat}}</p>
+        </div>
+    </script>
+
+
+    <script src="jquery-3.5.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="APIManager.js"></script>
+    <script src="Renderer.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
